@@ -36,7 +36,3 @@ And returns a **min–max price range** by:
 - Adjusting based on brand reliability and model performance.
 
 This is not a machine learning model but a **rule-based data-driven estimator** built from EDA.
-
----
-   git clone https://github.com/your-username/car-price-estimator.git
-   cd car-price-estimator

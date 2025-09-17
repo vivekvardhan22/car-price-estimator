@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar is-dark">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">🚗 Car Estimator</a>
+        </div>
+        <div class="navbar-end">
+            <a class="navbar-item" href="/">Estimator</a>
+            <a class="navbar-item" href="/analysis">Analysis</a>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered">Exploratory Analysis 📊</h1>
+
+            <div class="columns is-multiline">
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="{% static 'estimator/plots/reliability_sellingprice_sellerrating.jpeg' %}" alt="Reliability vs Price">
+                            </figure>
+                        </div>
+                        <div class="card-content has-text-centered">
+                            <p>Reliability vs Selling Price</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="{% static 'estimator/plots/odometer_sellingprice_sellerrating.jpeg' %}" alt="Odometer vs Price">
+                            </figure>
+                        </div>
+                        <div class="card-content has-text-centered">
+                            <p>Odometer vs Selling Price</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="{% static 'estimator/plots/age_sellingprice_reliability.jpeg' %}" alt="Age vs Price">
+                            </figure>
+                        </div>
+                        <div class="card-content has-text-centered">
+                            <p>Car Age vs Selling Price</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Estimated Price</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar is-dark">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">🚗 Car Estimator</a>
+        </div>
+        <div class="navbar-end">
+            <a class="navbar-item" href="/">Estimator</a>
+            <a class="navbar-item" href="/analysis">Analysis</a>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <div class="card has-text-centered">
+                <div class="card-content">
+                    <h1 class="title">Estimated Price Range</h1>
+                    <p class="subtitle">
+                        For <strong>{{ company }}</strong> {{ variant }}
+                        <br><br> 💰 Between <strong class="has-text-success">${{ min_price }}</strong> and <strong class="has-text-danger">${{ max_price }}</strong>
+                    </p>
+                    <a class="button is-link" href="/">🔄 Estimate Another Car</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

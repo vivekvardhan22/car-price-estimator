@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Car Price Estimator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar is-dark">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">🚗 Car Estimator</a>
+        </div>
+        <div class="navbar-end">
+            <a class="navbar-item" href="/">Estimator</a>
+            <a class="navbar-item" href="/analysis">Analysis</a>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="hero is-primary is-small">
+        <div class="hero-body has-text-centered">
+            <h1 class="title">Car Price Estimator</h1>
+            <h2 class="subtitle">Get an instant estimate for your used car 🚙</h2>
+        </div>
+    </section>
+
+    <!-- Form Card -->
+    <section class="section">
+        <div class="container">
+            <div class="card">
+                <div class="card-content">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="field">
+                            <label class="label">Car Company</label>
+                            <input class="input" type="text" name="company" placeholder="e.g. Toyota" required>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Variant / Model</label>
+                            <input class="input" type="text" name="variant" placeholder="e.g. Corolla" required>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Authorized Seller</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select name="seller_auth" required>
+                  <option value="1">Yes (Authorized)</option>
+                  <option value="0">No (Private)</option>
+                </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Odometer Reading (miles)</label>
+                            <input class="input" type="number" name="odometer" required>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Purchase Year</label>
+                            <input class="input" type="number" name="year" required>
+                        </div>
+
+                        <div class="field has-text-centered">
+                            <button class="button is-link is-large" type="submit">💡 Estimate Price</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+1)by entering variable details like odometer, state, company and all - what is the expected price it may be sold
+2)does higher engine power means, higher resale price? - answer comes to "no", but if we add more variables - then it becomes "yes"
+
+
+
+
+Edit to Dataset
+1)add another variable called reliability grading 0|1|2 on the basis of brand
+2)add another variable called authorized seller grading 0|1 on the basis of seller
+3)adjust date time column properly 
+4)delete the nan rows
+5)delete neagtive age rows
+5)check corr between columns
+6)what to do with outliers
+7)try to get in car maker and model into the hypothesis
+8) the car models with more std sellingprice than the car maker it get 1 point, or else 0 points
+
+
+**Based on hypothesis data, we will create function**
+
+
+
+*HYPOTHESIS*
+1)The good the reliable the brand is the better/high is the selling price, even better if seller is also rated good
+2)As the odometer value increases, the selling price decreases. When the odometer crosses 100000 - can notice drastic difference
+3)Even for a good car brand, if it's aged - the selling price will be lower

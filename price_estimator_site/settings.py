@@ -18,6 +18,11 @@ DEBUG = os.getenv("DJANGO_DEBUG", "True") == "True"
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-42bcb.up.railway.app',
+    'http://web-production-42bcb.up.railway.app'
+]
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
